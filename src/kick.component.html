@@ -1,0 +1,41 @@
+<fieldset ngModelGroup="sidekickDetails">
+  <div class="form-group">
+    <label for="sidekick-name">Sidekick Name</label>
+    <input
+      class="form-control"
+      id="sidekick-name"
+      type="text"
+      name="sidekickName"
+      (input)="kickNameChange()"
+      [(ngModel)]="sidekickName"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="sidekick-name">Sidekick Age</label>
+    <input
+      class="form-control"
+      id="sidekick-age"
+      type="text"
+      name="sidekickAge"
+      required
+      [(ngModel)]="sidekickAge"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="custom-validation">Custom Validation</label>
+    <input
+      class="form-control"
+      id="custom-validation"
+      type="text"
+      name="customValidation"
+      [(ngModel)]="customValidation"
+      [teamNamePrefix]="'EMP'"
+      required
+    />
+  </div>
+
+  <other-power></other-power>
+</fieldset>
